@@ -4,13 +4,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "index.js"
+    "dev": "index.js",
+    "start": "electron ."
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "description": "",
   "devDependencies": {
     "electron": "^33.2.1"
+  },
+  "dependencies": {
+    "firebase": "^11.1.0"
   }
 }
