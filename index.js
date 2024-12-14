@@ -4,7 +4,7 @@ const { createMainMenu } = require('./src/menu-electron');
 
 let win;
 
-// Función para crear la ventana de la aplicación
+
 function createWindow() {
   win = new BrowserWindow({
     width: 800,

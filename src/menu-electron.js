@@ -1,8 +1,6 @@
-// menu.js
 const { Menu, MenuItem } = require('electron');
 const path = require('path');
 
-// Crear el menú principal de la aplicación
 function createMainMenu() {
   const menuTemplate = [
     {
@@ -19,14 +17,14 @@ function createMainMenu() {
         {
           label: 'Guardar Itinerario',
           click() {
-            console.log('Guardando itinerario...'); // Funcionalidad vacía por ahora
+            console.log('Guardando itinerario...');
           }
         },
         {
           label: 'Explorar Carpeta de Letras',
           click() {
             const letrasPath = path.join(__dirname, 'godvay-launcher', 'LETRAS');
-            shell.openPath(letrasPath); // Abre la carpeta LETRAS
+            shell.openPath(letrasPath);
           }
         },
         {
@@ -40,14 +38,14 @@ function createMainMenu() {
         {
           label: 'Cerrar Sesión',
           click() {
-            console.log('Cerrando sesión...'); // Acción de ejemplo
+            console.log('Cerrando sesión...');
           }
         },
         {
           label: 'Cerrar Aplicación',
           accelerator: 'CmdOrCtrl+Q',
           click() {
-            app.quit(); // Cierra la aplicación
+            app.quit();
           }
         }
       ]
@@ -58,7 +56,6 @@ function createMainMenu() {
   Menu.setApplicationMenu(menu);
 }
 
-// Crear el menú contextual (clic derecho)
 function createContextMenu(mainWindow) {
   const contextMenu = new Menu();
   contextMenu.append(new MenuItem({ label: 'Copiar', role: 'copy' }));
@@ -70,5 +67,4 @@ function createContextMenu(mainWindow) {
   });
 }
 
-// Exportar las funciones
 module.exports = { createMainMenu, createContextMenu };
